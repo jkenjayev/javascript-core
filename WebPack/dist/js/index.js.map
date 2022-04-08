@@ -1,0 +1,17 @@
+{
+  "version": 3,
+  "file": "index.js",
+  "mappings": ";;;;;;;;;;AAAa;AACb;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;;;;;;;UCZA;UACA;;UAEA;UACA;UACA;UACA;UACA;UACA;UACA;UACA;UACA;UACA;UACA;UACA;UACA;;UAEA;UACA;;UAEA;UACA;UACA;;;;;;;;;ACtBA,eAAe,mBAAO,CAAC,gCAAQ;AAC/B;AACA;AACA;AACA",
+  "sources": [
+    "webpack://WebPack/./src/js/main.js",
+    "webpack://WebPack/webpack/bootstrap",
+    "webpack://WebPack/./src/js/script.js"
+  ],
+  "sourcesContent": [
+    "\"use strict\";\r\n\r\nfunction myModule() {\r\n  this.hello = function () {\r\n    console.log(\"Hello World\");\r\n  };\r\n\r\n  this.bye = function() {\r\n    console.log(\"Bye!\");\r\n  }\r\n}\r\n\r\nmodule.exports = myModule;\r\n",
+    "// The module cache\nvar __webpack_module_cache__ = {};\n\n// The require function\nfunction __webpack_require__(moduleId) {\n\t// Check if module is in cache\n\tvar cachedModule = __webpack_module_cache__[moduleId];\n\tif (cachedModule !== undefined) {\n\t\treturn cachedModule.exports;\n\t}\n\t// Create a new module (and put it into the cache)\n\tvar module = __webpack_module_cache__[moduleId] = {\n\t\t// no module.id needed\n\t\t// no module.loaded needed\n\t\texports: {}\n\t};\n\n\t// Execute the module function\n\t__webpack_modules__[moduleId](module, module.exports, __webpack_require__);\n\n\t// Return the exports of the module\n\treturn module.exports;\n}\n\n",
+    "const Module = require(\"./main\");\r\nconst myModule = new Module();\r\n\r\nmyModule.hello();\r\nmyModule.bye();\r\n"
+  ],
+  "names": [],
+  "sourceRoot": ""
+}
